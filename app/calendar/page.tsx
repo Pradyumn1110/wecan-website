@@ -339,8 +339,8 @@ export default function CalendarPage() {
    */
   const firstDayOffset = 2;
 
-  const cells = [
-    ...Array(firstDayOffset).fill(null),
+  const cells: (CalendarDay | null)[] = [
+    ...Array<null>(firstDayOffset).fill(null),
     ...september2026,
   ];
 
@@ -732,7 +732,7 @@ export default function CalendarPage() {
 
                   <div className="mt-3 space-y-2">
 
-                    {selectedDay.events.map((event, index) => (
+                    {selectedDay.events.map((event: string, index: number) => (
                       <div
                         key={index}
                         className="rounded-xl border border-[#a23f25]/10 bg-[#fff7ee] p-4 text-sm leading-6 text-[#513a30]"
