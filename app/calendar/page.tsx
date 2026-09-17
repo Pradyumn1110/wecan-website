@@ -580,7 +580,7 @@ export default function CalendarPage() {
                   {hasEvents && (
                     <div className="mt-2 min-w-0 space-y-1 overflow-hidden">
 
-                      {day.events.slice(0, 2).map((event, eventIndex) => (
+                      {day.events.slice(0, 2).map((event: string, eventIndex: number) => (
                         <p
                           key={eventIndex}
                           className="line-clamp-2 text-[8px] font-medium leading-[1.3] text-[#a23f25] sm:text-[10px]"
